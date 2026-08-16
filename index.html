@@ -358,14 +358,80 @@
 
         <div class="group">
           <div class="group-head">
-            <h3>Soins</h3>
-            <span>Savons crémeux & huiles</span>
+            <h3>Savons crémeux</h3>
+            <span>4 formulations</span>
           </div>
-          <div class="product-grid">
-            <article class="product"><h4>Savons crémeux</h4><small>3 formulations à venir</small></article>
+
+          <div class="bath-display bath-display--unified" id="soap-display">
+            <article class="bath-card is-active" data-soap-panel="nourrissant">
+              <div class="bath-visual"><img src="assets/images/savon-nourrissant.png" alt="Pot du Savon nourrissant"></div>
+              <div class="bath-copy">
+                <div class="bath-overline">Savon crémeux</div>
+                <h4>Savon nourrissant</h4>
+                <p class="bath-profile">Coco • Avoine • Miel</p>
+                <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les peaux sèches ou en quête de douceur et de confort.</p></div></div>
+                <p class="bath-description">Un savon doux et crémeux associant <strong>l’huile de coco</strong>, le <strong>lait d’avoine</strong> et le <strong>miel</strong>, pensé pour nettoyer la peau tout en préservant son confort et sa souplesse. Sa formule nourrissante convient particulièrement aux peaux sèches ou sujettes aux tiraillements.</p>
+                <p class="bath-description">Sa fragrance douce et lactée est réchauffée par une <strong>légère touche de vanille</strong> pour lui apporter une rondeur délicatement gourmande, sans être trop sucrée.</p>
+              </div>
+            </article>
+
+            <article class="bath-card" data-soap-panel="purifiant">
+              <div class="bath-visual"><img src="assets/images/savon-purifiant.png" alt="Pot du Savon purifiant"></div>
+              <div class="bath-copy">
+                <div class="bath-overline">Savon crémeux</div>
+                <h4>Savon purifiant</h4>
+                <p class="bath-profile">Charbon • Sel marin • Fucus</p>
+                <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les peaux ayant besoin d’un nettoyage en profondeur et d’une exfoliation légère.</p></div></div>
+                <p class="bath-description">Un savon purifiant associant <strong>charbon actif</strong>, <strong>sel marin fin</strong> et <strong>fucus</strong> pour débarrasser la peau de ses impuretés tout en lui offrant une exfoliation légère. De <strong>l’aloe vera</strong> vient compléter la formule pour apaiser la peau et préserver son confort après le nettoyage.</p>
+                <p class="bath-description">Sa fragrance fraîche, iodée et minérale évoque les <strong>embruns et l’air marin</strong>, pour une véritable sensation de bol d’air frais à chaque utilisation.</p>
+              </div>
+            </article>
+
+            <article class="bath-card" data-soap-panel="apaisant">
+              <div class="bath-visual"><img src="assets/images/savon-apaisant-reparateur.png" alt="Pot du Savon apaisant et réparateur"></div>
+              <div class="bath-copy">
+                <div class="bath-overline">Savon crémeux</div>
+                <h4>Savon apaisant &amp; réparateur</h4>
+                <p class="bath-profile">Karité • Calendula • Immortelle</p>
+                <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les peaux sensibles, fragilisées ou sujettes aux rougeurs et aux irritations.</p></div></div>
+                <p class="bath-description">Un savon riche et délicat à base de <strong>beurre de karité</strong>, associé au <strong>calendula</strong> et à l’<strong>immortelle</strong> pour prendre soin des peaux sensibilisées et leur apporter douceur, apaisement et confort. Sa formule protectrice accompagne particulièrement les peaux mises à rude épreuve.</p>
+                <p class="bath-description">Sa fragrance chaude et herbacée met à l’honneur <strong>l’immortelle</strong>, dont les notes naturellement épicées, légèrement miellées et évocatrices du curry sont volontairement sublimées pour lui donner un caractère solaire et singulier.</p>
+              </div>
+            </article>
+
+            <article class="bath-card" data-soap-panel="corps-cheveux">
+              <div class="bath-visual"><img src="assets/images/savon-corps-cheveux.png" alt="Pot du Savon corps et cheveux"></div>
+              <div class="bath-copy">
+                <div class="bath-overline">Savon crémeux</div>
+                <h4>Savon corps &amp; cheveux</h4>
+                <p class="bath-profile">Jojoba • Aloe vera • Camomille</p>
+                <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les peaux et cuirs chevelus très sensibles, les personnes sujettes aux allergies ainsi que la toilette des enfants et des tout-petits.</p></div></div>
+                <p class="bath-description">Un savon crémeux polyvalent à la formule volontairement minimaliste, associant <strong>huile de jojoba</strong>, <strong>aloe vera</strong> et <strong>camomille</strong> pour nettoyer en douceur le corps comme les cheveux tout en préservant le confort des peaux et cuirs chevelus les plus délicats.</p>
+                <p class="bath-description"><strong>Sans fragrance ajoutée ni huiles essentielles</strong>, il conserve uniquement l’odeur naturelle, douce et discrète de ses ingrédients afin de limiter au maximum les sources d’irritation et de sensibilisation.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="bath-selector bath-selector--four" aria-label="Choisir un savon crémeux">
+            <button class="bath-thumb is-active" type="button" data-soap-target="nourrissant">
+              <img src="assets/images/savon-nourrissant.png" alt=""><span class="thumb-copy"><strong>Savon nourrissant</strong><small>Coco • Avoine • Miel</small></span>
+            </button>
+            <button class="bath-thumb" type="button" data-soap-target="purifiant">
+              <img src="assets/images/savon-purifiant.png" alt=""><span class="thumb-copy"><strong>Savon purifiant</strong><small>Charbon • Sel marin • Fucus</small></span>
+            </button>
+            <button class="bath-thumb" type="button" data-soap-target="apaisant">
+              <img src="assets/images/savon-apaisant-reparateur.png" alt=""><span class="thumb-copy"><strong>Savon apaisant &amp; réparateur</strong><small>Karité • Calendula • Immortelle</small></span>
+            </button>
+            <button class="bath-thumb" type="button" data-soap-target="corps-cheveux">
+              <img src="assets/images/savon-corps-cheveux.png" alt=""><span class="thumb-copy"><strong>Savon corps &amp; cheveux</strong><small>Jojoba • Aloe vera • Camomille</small></span>
+            </button>
+          </div>
+
+          <div class="product-grid" style="margin-top:24px;">
             <article class="product"><h4>Huiles de soin</h4><small>5 formulations à venir</small></article>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -462,6 +528,27 @@
       });
     });
 
+
+
+    const soapButtons = document.querySelectorAll('[data-soap-target]');
+    const soapPanels = document.querySelectorAll('[data-soap-panel]');
+
+    soapButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.soapTarget;
+        soapButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+        soapPanels.forEach((panel) => {
+          const isTarget = panel.dataset.soapPanel === target;
+          if (isTarget) {
+            panel.classList.add('is-entering', 'is-active');
+            requestAnimationFrame(() => requestAnimationFrame(() => panel.classList.remove('is-entering')));
+          } else {
+            panel.classList.remove('is-active', 'is-entering');
+          }
+        });
+        document.getElementById('soap-display')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
 
     const policyButtons = document.querySelectorAll('[data-policy-target]');
     const policyPanels = document.querySelectorAll('[data-policy-panel]');
