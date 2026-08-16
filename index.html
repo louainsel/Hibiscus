@@ -29,7 +29,17 @@
     <div class="wrap">
       <a href="#maison">Accueil</a>
       <a href="#politique">Politique de l’atelier</a>
-      <a href="#produits">Produits</a>
+
+      <div class="nav-dropdown">
+        <a href="#produits" class="nav-dropdown-trigger">Produits <span aria-hidden="true">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="#parfums">Parfums</a>
+          <a href="#bain">Produits de bain</a>
+          <a href="#savons">Savons</a>
+          <a href="#huiles">Huiles de soin</a>
+        </div>
+      </div>
+
       <a href="#hrp">HRP & crédits</a>
     </div>
   </nav>
@@ -122,7 +132,7 @@
         <h2>Les créations de l’Hibiscus</h2>
         <p class="lead">Parfums, soins et préparations élaborés artisanalement par Sadiya. Découvrez les créations actuellement proposées par l’atelier et sélectionnez un produit pour en parcourir les notes, la composition et les usages.</p>
 
-        <div class="group fragrance-group">
+        <div class="group fragrance-group" id="parfums">
           <div class="group-head">
             <h3>Parfums signatures</h3>
             <span>4 créations</span>
@@ -233,7 +243,7 @@
           </div>
         </div>
 
-        <div class="group bath-group">
+        <div class="group bath-group" id="bain">
           <div class="group-head">
             <h3>Le bain</h3>
             <span>4 préparations</span>
@@ -356,7 +366,7 @@
           </div>
         </div>
 
-        <div class="group">
+        <div class="group" id="savons">
           <div class="group-head">
             <h3>Savons crémeux</h3>
             <span>4 formulations</span>
@@ -427,8 +437,68 @@
             </button>
           </div>
 
-          <div class="product-grid" style="margin-top:24px;">
-            <article class="product"><h4>Huiles de soin</h4><small>5 formulations à venir</small></article>
+          <div class="group oils-group" id="huiles">
+            <div class="group-head">
+              <h3>Huiles de soin</h3>
+              <span>4 formulations</span>
+            </div>
+
+            <div class="bath-display bath-display--unified" id="oil-display">
+              <article class="bath-card is-active" data-oil-panel="massage">
+                <div class="bath-visual"><img src="assets/images/huile-massage-chauffante.png" alt="Flacon de l’Huile de massage chauffante"></div>
+                <div class="bath-copy">
+                  <div class="bath-overline">Huile de soin</div>
+                  <h4>Huile de massage chauffante</h4>
+                  <p class="bath-profile">Sésame • Camphre • Gaulthérie • Gingembre</p>
+                  <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les muscles fatigués, les courbatures et les tensions après l’effort.</p></div></div>
+                  <p class="bath-description">Une huile de massage à base d’<strong>huile de sésame</strong>, associant <strong>camphre</strong>, <strong>gaulthérie</strong> et <strong>gingembre</strong> pour accompagner la récupération et soulager les muscles sollicités. Sa texture permet un massage prolongé tandis que sa formule procure une sensation progressivement réchauffante sur les zones travaillées.</p>
+                  <p class="bath-description">Sa fragrance puissante est dominée par le <strong>camphre</strong>, frais et pénétrant, avant de laisser apparaître les notes plus chaudes et épicées du <strong>gingembre</strong>, sur un fond végétal caractéristique de la gaulthérie.</p>
+                </div>
+              </article>
+
+              <article class="bath-card" data-oil-panel="cheveux">
+                <div class="bath-visual"><img src="assets/images/huile-cheveux.png" alt="Flacon de l’Huile pour les cheveux"></div>
+                <div class="bath-copy">
+                  <div class="bath-overline">Huile de soin</div>
+                  <h4>Huile pour les cheveux</h4>
+                  <p class="bath-profile">Camélia • Monoï • Ricin • Macadamia</p>
+                  <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Les longueurs et pointes sèches, rêches ou sujettes aux nœuds, ayant besoin de douceur et de souplesse.</p></div></div>
+                  <p class="bath-description">Une huile de soin capillaire associant <strong>camélia</strong>, <strong>monoï</strong>, <strong>huile de ricin</strong> et <strong>macadamia</strong>, pensée pour nourrir et assouplir les longueurs tout en facilitant le démêlage. Sa formule aide à gainer la fibre, discipliner les cheveux et leur redonner douceur et brillance, avec une attention particulière portée aux pointes.</p>
+                  <p class="bath-description"><strong>Sans fragrance ajoutée</strong>, elle conserve le parfum naturellement floral et solaire du <strong>monoï</strong>, dominé par les notes délicates de <strong>fleur de tiaré</strong>.</p>
+                </div>
+              </article>
+
+              <article class="bath-card" data-oil-panel="ecailles">
+                <div class="bath-visual"><img src="assets/images/huile-ecailles.png" alt="Flacon de l’Huile pour les écailles"></div>
+                <div class="bath-copy">
+                  <div class="bath-overline">Huile de soin</div>
+                  <h4>Huile pour les écailles</h4>
+                  <p class="bath-profile">Moringa • Amla • Brahmi • Bhringraj</p>
+                  <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Nourrir, assouplir et lustrer les écailles, prendre soin de leur jonction avec la peau et renforcer les cheveux et le cuir chevelu.</p></div></div>
+                  <p class="bath-description">Inspirée des soins traditionnels thavnairois, cette huile associe une base d’<strong>huile de moringa</strong> à un macérât d’<strong>amla</strong>, de <strong>brahmi</strong> et de <strong>bhringraj</strong>. Riche et émolliente, elle est pensée pour entretenir les écailles, préserver leur souplesse et leur lustre tout en protégeant et apaisant les zones plus délicates à la jonction entre peau et écailles.</p>
+                  <p class="bath-description">Sa composition, inspirée des huiles capillaires traditionnelles <strong>hannoises</strong>, permet également de l’utiliser en soin du <strong>cuir chevelu et des cheveux</strong>, notamment pour les fortifier et entretenir leur vitalité.</p>
+                </div>
+              </article>
+
+              <article class="bath-card" data-oil-panel="pelage">
+                <div class="bath-visual"><img src="assets/images/huile-pelage.png" alt="Flacon de l’Huile pour le pelage"></div>
+                <div class="bath-copy">
+                  <div class="bath-overline">Huile de soin</div>
+                  <h4>Huile pour le pelage</h4>
+                  <p class="bath-profile">Argan • Jojoba • Plantain</p>
+                  <div class="bath-notes"><div class="bath-note-row"><span>Idéal pour</span><p>Nourrir, assouplir et faire briller le pelage tout en prenant soin de la peau qu’il recouvre.</p></div></div>
+                  <p class="bath-description">Une huile de soin légère associant <strong>huile d’argan</strong>, <strong>jojoba</strong> et <strong>plantain</strong>, pensée pour nourrir et assouplir le poil sans l’alourdir. Appliquée en petite quantité puis répartie par brossage, elle facilite l’entretien du pelage et lui redonne douceur et lustre, tandis que le plantain contribue à apaiser et protéger la peau dissimulée sous celui-ci.</p>
+                  <p class="bath-description"><strong>Sans fragrance ajoutée</strong>, elle conserve uniquement l’odeur naturelle et discrète de ses ingrédients, aux nuances légèrement <strong>noisettées, végétales et herbacées</strong>.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="bath-selector bath-selector--four" aria-label="Choisir une huile de soin">
+              <button class="bath-thumb is-active" type="button" data-oil-target="massage"><img src="assets/images/huile-massage-chauffante.png" alt=""><span class="thumb-copy"><strong>Massage chauffante</strong><small>Sésame • Camphre • Gaulthérie • Gingembre</small></span></button>
+              <button class="bath-thumb" type="button" data-oil-target="cheveux"><img src="assets/images/huile-cheveux.png" alt=""><span class="thumb-copy"><strong>Huile pour les cheveux</strong><small>Camélia • Monoï • Ricin • Macadamia</small></span></button>
+              <button class="bath-thumb" type="button" data-oil-target="ecailles"><img src="assets/images/huile-ecailles.png" alt=""><span class="thumb-copy"><strong>Huile pour les écailles</strong><small>Moringa • Amla • Brahmi • Bhringraj</small></span></button>
+              <button class="bath-thumb" type="button" data-oil-target="pelage"><img src="assets/images/huile-pelage.png" alt=""><span class="thumb-copy"><strong>Huile pour le pelage</strong><small>Argan • Jojoba • Plantain</small></span></button>
+            </div>
           </div>
         </div>
 
@@ -547,6 +617,27 @@
           }
         });
         document.getElementById('soap-display')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+
+    const oilButtons = document.querySelectorAll('[data-oil-target]');
+    const oilPanels = document.querySelectorAll('[data-oil-panel]');
+
+    oilButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.oilTarget;
+        oilButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+        oilPanels.forEach((panel) => {
+          const isTarget = panel.dataset.oilPanel === target;
+          if (isTarget) {
+            panel.classList.add('is-entering', 'is-active');
+            requestAnimationFrame(() => requestAnimationFrame(() => panel.classList.remove('is-entering')));
+          } else {
+            panel.classList.remove('is-active', 'is-entering');
+          }
+        });
+        document.getElementById('oil-display')?.scrollIntoView({behavior:'smooth', block:'nearest'});
       });
     });
 

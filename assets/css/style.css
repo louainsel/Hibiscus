@@ -964,3 +964,81 @@ footer {
   font-size: .93rem;
   color: #bdaaa2 !important;
 }
+
+
+/* --- Menu déroulant Produits --- */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-trigger span {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: .78em;
+  transition: transform .18s ease;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 50%;
+  min-width: 205px;
+  transform: translateX(-50%) translateY(-5px);
+  padding: 8px;
+  background: rgba(83, 43, 38, .97);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 15px;
+  box-shadow: 0 16px 36px rgba(53, 24, 20, .22);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown:hover .nav-dropdown-trigger span,
+.nav-dropdown:focus-within .nav-dropdown-trigger span {
+  transform: rotate(180deg);
+}
+
+nav .nav-dropdown-menu a {
+  display: block;
+  padding: 10px 13px;
+  border-radius: 10px;
+  color: #fff4ee;
+  white-space: nowrap;
+  font-size: .76rem;
+  letter-spacing: .07em;
+}
+
+nav .nav-dropdown-menu a:hover,
+nav .nav-dropdown-menu a:focus {
+  background: rgba(255,255,255,.10);
+  color: #ffc3b4;
+}
+
+/* Les ancres gardent leur titre visible sous la navigation fixe. */
+#parfums,
+#bain,
+#savons,
+#huiles {
+  scroll-margin-top: 90px;
+}
