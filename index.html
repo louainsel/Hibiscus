@@ -57,17 +57,32 @@
 
     <section class="policy" id="politique">
       <div class="wrap">
-        <div class="section-title">
-          <div>
-            <div class="kicker">Fonctionnement</div>
-            <h2>Politique de l’atelier</h2>
-          </div>
-          <div class="rule"></div>
+        <div class="section-kicker policy-kicker">Fonctionnement</div>
+        <h2>Politique de l’atelier</h2>
+        <p class="lead policy-lead">Trois principes simples pour comprendre le fonctionnement d’Hibiscus.</p>
+
+        <div class="policy-selector" aria-label="Principes de l’atelier">
+          <button class="policy-choice" type="button" data-policy-target="contenants">
+            <span class="policy-choice-number">01</span>
+            <strong>Des contenants faits pour durer</strong>
+            <small>Consigne, recharges et mousselines réutilisables.</small>
+          </button>
+
+          <button class="policy-choice" type="button" data-policy-target="surmesure">
+            <span class="policy-choice-number">02</span>
+            <strong>Des créations pensées pour vous</strong>
+            <small>Parfums et soins personnalisés sur rendez-vous.</small>
+          </button>
+
+          <button class="policy-choice" type="button" data-policy-target="pourchacun">
+            <span class="policy-choice-number">03</span>
+            <strong>Des soins pour chacun</strong>
+            <small>Des produits ouverts à tous, avec les précautions nécessaires.</small>
+          </button>
         </div>
 
-        <div class="policy-grid">
-          <article class="policy-card">
-            <div class="policy-number">01</div>
+        <div id="policy-detail" class="policy-detail" hidden>
+          <article class="policy-panel" data-policy-panel="contenants">
             <h3>Des contenants faits pour durer</h3>
             <p>Les contenants utilisés par Hibiscus sont consignés et pensés pour être réemployés. Lors d’un premier achat, le prix du produit comprend ainsi celui de son flacon, pot ou bouteille.</p>
             <p>Une fois le produit terminé, le contenant peut être rapporté à l’atelier. S’il est destiné à accueillir de nouveau la même préparation, seule la recharge est alors facturée. Si vous n’en avez plus l’usage, vous pouvez simplement le restituer à Hibiscus et le prix du contenant vous sera rendu.</p>
@@ -75,8 +90,7 @@
             <p>Les infusions de bain sont proposées en vrac dans des pots soumis au même principe de consigne. Des mousselines lavables et réutilisables peuvent être achetées séparément. Confectionnées pour Hibiscus par <strong>Naska</strong>, elles ne sont pas consignées et restent la propriété de leur acquéreur. Une part de leur prix de vente est directement reversée à leur créatrice.</p>
           </article>
 
-          <article class="policy-card">
-            <div class="policy-number">02</div>
+          <article class="policy-panel" data-policy-panel="surmesure">
             <h3>Des créations pensées pour vous</h3>
             <p>Les créations présentées par Hibiscus ne sont qu’une partie de ce que l’atelier peut proposer. Sadiya réalise également, sur rendez-vous, des parfums et soins personnalisés.</p>
             <p>Une première rencontre permet d’échanger autour de vos goûts, de vos habitudes et de ce que vous recherchez : une fragrance particulière, une sensation, un besoin ou parfois simplement une idée encore difficile à mettre en mots.</p>
@@ -84,8 +98,7 @@
             <p>Une création personnalisée demande du temps et peut nécessiter plusieurs essais avant d’aboutir. Elle n’est donc pas nécessairement remise le jour de la consultation.</p>
           </article>
 
-          <article class="policy-card">
-            <div class="policy-number">03</div>
+          <article class="policy-panel" data-policy-panel="pourchacun">
             <h3>Des soins pour chacun</h3>
             <p>Les créations d’Hibiscus ne sont destinées ni à un genre, ni à une origine particulière. Parfums, soins et préparations peuvent être choisis librement selon les goûts, les envies et les besoins de chacun, sans distinction.</p>
             <p>Certaines précautions restent néanmoins nécessaires. En cas d’allergie ou d’intolérance connue, pensez à le signaler à Sadiya avant tout achat ou toute création personnalisée. Selon les ingrédients concernés, certaines préparations pourront être adaptées ou une alternative proposée.</p>
@@ -419,6 +432,42 @@
           behavior: 'smooth',
           block: 'nearest'
         });
+      });
+    });
+
+
+    const policyButtons = document.querySelectorAll('[data-policy-target]');
+    const policyPanels = document.querySelectorAll('[data-policy-panel]');
+    const policyDetail = document.getElementById('policy-detail');
+
+    policyButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.policyTarget;
+        const alreadyActive = button.classList.contains('is-active');
+
+        policyButtons.forEach((item) => item.classList.remove('is-active'));
+        policyPanels.forEach((panel) => panel.classList.remove('is-active'));
+
+        if (alreadyActive) {
+          if (policyDetail) policyDetail.hidden = true;
+          return;
+        }
+
+        button.classList.add('is-active');
+
+        const panel = document.querySelector(`[data-policy-panel="${target}"]`);
+        if (panel) {
+          panel.classList.add('is-active');
+        }
+
+        if (policyDetail) {
+          policyDetail.hidden = false;
+          policyDetail.classList.remove('is-entering');
+          requestAnimationFrame(() => {
+            policyDetail.classList.add('is-entering');
+            requestAnimationFrame(() => policyDetail.classList.remove('is-entering'));
+          });
+        }
       });
     });
 
