@@ -721,3 +721,67 @@ footer {
 .bath-display--unified {
   margin-top: 28px;
 }
+
+
+/* --- Politique de l'atelier --- */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.policy-card {
+  position: relative;
+  padding: 34px 30px 32px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.policy-card::after {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  right: -55px;
+  top: -58px;
+  background: rgba(217,108,95,.08);
+  pointer-events: none;
+}
+
+.policy-number {
+  margin-bottom: 22px;
+  color: var(--terracotta);
+  font-family: Arial, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.policy-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 24px;
+  font-size: 1.65rem;
+  line-height: 1.12;
+  font-weight: 500;
+}
+
+.policy-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 15px;
+  color: #5f4741;
+  line-height: 1.72;
+}
+
+.policy-card p:last-child { margin-bottom: 0; }
+
+.policy-card strong {
+  color: var(--hibiscus);
+  font-weight: 700;
+}
