@@ -1042,3 +1042,350 @@ nav .nav-dropdown-menu a:focus {
 #huiles {
   scroll-margin-top: 90px;
 }
+
+/* ==========================================================
+   RESPONSIVE — tablette & mobile
+   Ces règles sont placées en fin de fichier afin d'adapter
+   les composants ajoutés après les premiers breakpoints,
+   sans modifier leur rendu desktop.
+   ========================================================== */
+
+@media (max-width: 950px) {
+  /* Navigation : garde tous les liens accessibles sans déborder. */
+  nav .wrap {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    padding-inline: 4px;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+  }
+
+  .intro-grid,
+  .hrp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shot {
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .policy-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-choice {
+    min-height: 0;
+  }
+
+  .policy-choice-number {
+    margin-bottom: 12px;
+  }
+
+  .fragrance-card,
+  .bath-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 34px;
+  }
+
+  .fragrance-visual,
+  .bath-visual {
+    min-height: 340px;
+  }
+
+  .fragrance-visual img {
+    max-height: 360px;
+  }
+
+  .bath-visual img {
+    max-height: 380px;
+  }
+
+  .fragrance-copy,
+  .bath-copy {
+    max-width: none;
+  }
+
+  .bath-selector--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fragrance-thumb,
+  .bath-thumb {
+    min-height: 175px;
+  }
+
+  .hrp-card {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrap {
+    width: min(calc(100% - 30px), var(--max));
+  }
+
+  section {
+    padding: 62px 0;
+  }
+
+  .hero {
+    min-height: 52vh;
+    background-position: center;
+  }
+
+  .hero-inner {
+    padding: 58px 0 78px;
+  }
+
+  .eyebrow {
+    font-size: .68rem;
+    letter-spacing: .16em;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 18vw, 5.6rem);
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+  }
+
+  .tagline,
+  .lead {
+    font-size: 1.04rem;
+  }
+
+  /* Barre compacte : défilement horizontal au doigt plutôt qu'un empilement. */
+  nav .wrap {
+    gap: 4px;
+    padding: 9px 0;
+  }
+
+  nav a {
+    font-size: .72rem;
+    letter-spacing: .06em;
+    padding: 7px 10px;
+  }
+
+  .nav-dropdown-menu {
+    min-width: 185px;
+  }
+
+  .group-head {
+    display: block;
+  }
+
+  .group-head span {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .group h3 {
+    font-size: 1.7rem;
+  }
+
+  .policy-selector {
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .policy-choice {
+    padding: 20px;
+  }
+
+  .policy-choice strong {
+    font-size: 1.2rem;
+  }
+
+  .policy-detail {
+    padding: 24px 22px;
+    border-radius: 20px;
+  }
+
+  .policy-panel h3 {
+    font-size: 1.65rem;
+  }
+
+  .fragrance-card,
+  .bath-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .fragrance-visual,
+  .bath-visual {
+    min-height: 260px;
+  }
+
+  .fragrance-visual img,
+  .bath-visual img {
+    width: min(82%, 330px);
+    max-height: 310px;
+  }
+
+  .fragrance-copy h4,
+  .bath-copy h4 {
+    font-size: clamp(2rem, 10vw, 3.15rem);
+  }
+
+  .fragrance-profile,
+  .bath-profile {
+    margin-bottom: 22px;
+  }
+
+  .note-row,
+  .bath-note-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 0;
+  }
+
+  .note-row span,
+  .bath-note-row span {
+    font-size: .93rem;
+  }
+
+  .fragrance-selector,
+  .bath-selector--four {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .fragrance-thumb,
+  .bath-thumb {
+    min-height: 0;
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 14px;
+    padding: 12px 14px;
+  }
+
+  .fragrance-thumb img,
+  .bath-thumb img {
+    width: 72px;
+    height: 104px;
+  }
+
+  .thumb-copy strong,
+  .bath-thumb .thumb-copy strong {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .thumb-copy small,
+  .bath-thumb .thumb-copy small {
+    font-size: .82rem;
+    line-height: 1.35;
+  }
+
+  .hrp-grid {
+    gap: 16px;
+  }
+
+  .hrp-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .hrp-card h3 {
+    font-size: 1.45rem;
+  }
+
+  footer {
+    padding: 28px 16px;
+    line-height: 1.5;
+  }
+
+  #parfums,
+  #bain,
+  #savons,
+  #huiles {
+    scroll-margin-top: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    width: min(calc(100% - 22px), var(--max));
+  }
+
+  section {
+    padding: 54px 0;
+  }
+
+  .hero {
+    min-height: 48vh;
+  }
+
+  .hero-inner {
+    padding: 48px 0 70px;
+  }
+
+  h1 {
+    font-size: clamp(3.1rem, 19vw, 4.7rem);
+  }
+
+  h2 {
+    font-size: clamp(2.05rem, 12vw, 3rem);
+  }
+
+  .address {
+    padding: 15px 16px;
+  }
+
+  .shot {
+    padding: 9px;
+    border-radius: 20px;
+    transform: none;
+  }
+
+  .shot img {
+    border-radius: 14px;
+  }
+
+  .policy-detail,
+  .fragrance-card,
+  .bath-card {
+    padding: 19px;
+  }
+
+  .fragrance-visual,
+  .bath-visual {
+    min-height: 220px;
+  }
+
+  .fragrance-visual img,
+  .bath-visual img {
+    width: min(88%, 285px);
+    max-height: 270px;
+  }
+
+  .fragrance-description,
+  .bath-description,
+  .policy-panel p,
+  .hrp-card p {
+    font-size: .97rem;
+  }
+
+  .fragrance-thumb,
+  .bath-thumb {
+    grid-template-columns: 64px minmax(0, 1fr);
+    padding: 10px 12px;
+  }
+
+  .fragrance-thumb img,
+  .bath-thumb img {
+    width: 60px;
+    height: 88px;
+  }
+
+  .credits-list li {
+    overflow-wrap: anywhere;
+  }
+}
